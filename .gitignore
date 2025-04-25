@@ -1,0 +1,57 @@
+# Byte-compiled files
+*.py[cod]
+__pycache__/
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# IDE files (for PyCharm, Visual Studio Code, etc.)
+.vscode/
+.idea/
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+
+# pytest
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# MyPy
+.mypy_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# SQLite databases
+*.sqlite3
+
+# Docker files
+Dockerfile
+docker-compose.yml
+
+# Local environment configuration
+*.env
+*.env.local
+*.env.*.local
+
+# macOS Finder
+.DS_Store
+
+# Windows Thumbs.db
+Thumbs.db
+
+# JetBrains IDE specific files
+.idea/
