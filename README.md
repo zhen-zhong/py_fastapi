@@ -10,13 +10,20 @@
    - 你可以使用 pip freeze > requirements.txt 命令来生成这个文件
    - 也可以手动创建并添加所需的库
    - 例如：fastapi、uvicorn、sqlalchemy、alembic 等
-4. uvicorn main:app --reload --port 8080 # 启动项目
+4. uvicorn app.main:app --reload --port 8080 # 启动项目
    - main:app 是指在 main.py 文件中有一个名为 app 的 FastAPI 实例
    - --reload 选项会在代码更改时自动重启服务器
    - --port 8080 指定服务器运行的端口号
 5. pip freeze > requirements.txt # 生成依赖文件
    - 这个命令会将当前虚拟环境中安装的所有库及其版本输出到 requirements.txt 文件中
-6. 目录结构
+6. deactivate
+   - 退出虚拟环境
+   - 在 Windows 上使用 venv\Scripts\deactivate
+   - 在 Linux 或 macOS 上使用 deactivate
+7. pip install alembic # 安装 Alembic
+   - Alembic 是一个用于数据库迁移的工具
+   - 它可以帮助你管理数据库模式的版本控制  
+7. 目录结构
 
 ```
 my_fastapi_project/
@@ -57,6 +64,8 @@ my_fastapi_project/
 │   │   ├── __init__.py
 │   │   ├── base.py         # 数据库基础设置
 │   │   ├── session.py      # 数据库会话
+│   │   ├── models.py       # 数据库模型
+│   │   ├── init_db.py      # 初始化数据库
 │   │   └── ...
 │   ├── tests/
 │   │   ├── __init__.py
