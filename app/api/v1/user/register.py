@@ -1,4 +1,3 @@
-# app/api/register.py
 from fastapi import APIRouter
 from app.schemas.user import UserRegister
 
