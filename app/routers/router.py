@@ -6,4 +6,3 @@ router = APIRouter()
 
 router.include_router(login_router, prefix="/user")
 router.include_router(register_router, prefix="/user")
-
