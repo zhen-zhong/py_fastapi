@@ -7,7 +7,7 @@ router = APIRouter()
 
 @router.post("/register")
 def register():
-    url = "https://k301o.cloudatacdn.com/u5kj7fdbrtblsdgge4e4ooidiqykdyci2cprs7edvpsmfns5szato3hy52uq/ht1bd2lgrk~ruN06NuJog?token=qrgk8v8do0vnm26hg7cowfhx&expiry=1746764082189"
+    url = "https://k301o.cloudatacdn.com/u5kj7fdbrtblsdgge4e4ooidiqykdyci2cprs7edvpsmfcci3za5absugnia/fr9vbw6613~8PbBsMdvCA?token=qrgk8v8do0vnm26hg7cowfhx&expiry=1747994007481"
 
     headers = {
         "Accept": "*/*",
@@ -25,7 +25,7 @@ def register():
     }
 
     response = requests.get(url, headers=headers, stream=True)
-
+    print(response.status_code)
     if response.status_code == 206:
         with open("video.mp4", "wb") as video_file:
             for chunk in response.iter_content(chunk_size=1024):
