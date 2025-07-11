@@ -1,19 +1,17 @@
-from pydantic import BaseModel
+# app/schemas/user.py
 
+from pydantic import BaseModel, EmailStr
 
-# 用户登录模型
-class UserLogin(BaseModel):
+class UserBase(BaseModel):
     username: str
+    email: EmailStr
+    is_active: bool = True
+
+class UserCreate(UserBase):
     password: str
 
+class UserPublic(UserBase):
+    id: int
 
-# 用户注册模型
-class UserRegister(BaseModel):
-    username: str
-    password: str
-    email: str
-
-
-# 忘记密码模型
-class ForgotPassword(BaseModel):
-    email: str
+    class Config:
+        from_attributes = True # Pydantic v2, or orm_mode = True for v1
